@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Interview - AI Mock Interview</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="loadInterview()">
+  <div class="container">
+    <div class="nav">
+      <div class="brand">Interview</div>
+      <button class="btn secondary" onclick="window.location.href='dashboard.html'">Back</button>
+    </div>
+
+    <div class="card">
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+      <div class="row">
+        <div class="badge">Question <span id="qNo">1</span> / <span id="qCount">0</span></div>
+        <div class="timer-box">
+          <span class="timer-icon">⏱️</span>
+          <span id="timer">00:00</span>
+        </div>
+      </div>
+      <hr/>
+
+      <h2 id="qText">Loading...</h2>
+      <div class="hint-section">
+        <button class="hint-toggle" onclick="toggleHint()" id="hintBtn">💡 Show Hint</button>
+        <div class="hint-content" id="hintContent" style="display:none;">
+          <div class="small" style="color:#ffd700; margin-bottom:8px;"><b>💡 Interview Tip:</b></div>
+          <div id="hintText" class="small">Use the STAR method (Situation, Task, Action, Result) for behavioral questions. For technical questions, explain your thought process step by step.</div>
+        </div>
+      </div>
+      <textarea id="answer" placeholder="Write your answer here..." oninput="enableNextButton()"></textarea>
+
+      <div style="height:12px;"></div>
+      <button id="nextBtn" class="btn" onclick="nextQuestion()" disabled style="opacity:0.5;">Next Question →</button>
+      <button id="submitBtn" class="btn" onclick="submitAllAnswers()" style="display:none;">✓ Submit Interview</button>
+
+      <div style="height:12px;"></div>
+      <div id="messageBox"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

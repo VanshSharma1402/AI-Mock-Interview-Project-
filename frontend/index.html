@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI Mock Interview System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <div class="brand">AI Mock Interview System</div>
+      <span class="badge">Trending Final Year Project</span>
+    </div>
+
+    <div class="card">
+      <h1>Login / Register</h1>
+      <p>Practice HR + Technical questions and get feedback with scoring. This demo uses mock AI so it works offline also.</p>
+
+      <div id="msg" class="small" style="margin-bottom:10px;"></div>
+
+      <div class="grid">
+        <div class="item">
+          <h2>Login</h2>
+          <input id="l_email" placeholder="Email" />
+          <div style="height:10px"></div>
+          <input id="l_pass" type="password" placeholder="Password" />
+          <div style="height:12px"></div>
+          <button class="btn" onclick="handleLogin()">Login</button>
+        </div>
+
+        <div class="item">
+          <h2>Register</h2>
+          <input id="r_name" placeholder="Full Name" />
+          <div style="height:10px"></div>
+          <input id="r_email" placeholder="Email" />
+          <div style="height:10px"></div>
+          <input id="r_pass" type="password" placeholder="Password" />
+          <div style="height:12px"></div>
+          <button class="btn secondary" onclick="handleRegister()">Create Account</button>
+        </div>
+      </div>
+
+      <hr />
+      <div class="small">Backend must be running on <b>http://127.0.0.1:5000</b></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

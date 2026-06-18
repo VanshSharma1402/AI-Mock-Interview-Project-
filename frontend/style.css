@@ -1,0 +1,55 @@
+:root { --bg:#0b1220; --card:#121a2c; --text:#e8eefc; --muted:#9bb0d1; --accent:#5aa7ff; }
+*{ box-sizing:border-box; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; }
+body{ margin:0; background:linear-gradient(120deg,#081025,#0f1a33); color:var(--text); }
+.container{ max-width:980px; margin:0 auto; padding:22px; }
+.nav{ display:flex; gap:12px; align-items:center; justify-content:space-between; margin-bottom:18px; }
+.brand{ font-weight:800; letter-spacing:.4px; }
+.card{ background:rgba(18,26,44,.92); border:1px solid rgba(255,255,255,.08); border-radius:18px; padding:18px; box-shadow:0 12px 25px rgba(0,0,0,.25); }
+.grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+@media (max-width:760px){ .grid{ grid-template-columns:1fr; } }
+h1,h2{ margin:8px 0 10px; }
+p{ color:var(--muted); margin:6px 0 14px; }
+input,select,textarea{ width:100%; padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,.12); background:#0c1426; color:var(--text); outline:none; }
+textarea{ min-height:120px; resize:vertical; }
+.btn{ background:var(--accent); border:none; color:#06101f; font-weight:700; padding:12px 14px; border-radius:12px; cursor:pointer; }
+.btn.secondary{ background:transparent; color:var(--text); border:1px solid rgba(255,255,255,.18); }
+.row{ display:flex; gap:10px; }
+.row > *{ flex:1; }
+.small{ font-size:13px; color:var(--muted); }
+.badge{ display:inline-block; padding:6px 10px; border-radius:999px; background:rgba(90,167,255,.15); border:1px solid rgba(90,167,255,.35); color:#cfe5ff; font-size:13px; }
+hr{ border:0; border-top:1px solid rgba(255,255,255,.10); margin:14px 0; }
+.list{ display:flex; flex-direction:column; gap:10px; }
+.item{ padding:12px; border-radius:14px; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08); }
+.link{ color:#cfe5ff; text-decoration:none; }
+
+/* Progress Bar */
+.progress-container{ width:100%; height:6px; background:rgba(255,255,255,.1); border-radius:999px; margin-bottom:12px; overflow:hidden; }
+.progress-bar{ height:100%; background:linear-gradient(90deg,#5aa7ff,#4ade80); transition:width .3s ease; width:0%; }
+
+/* Timer */
+.timer-box{ display:flex; align-items:center; gap:6px; padding:6px 10px; border-radius:999px; background:rgba(90,167,255,.15); border:1px solid rgba(90,167,255,.35); color:#cfe5ff; font-size:13px; font-weight:600; }
+.timer-icon{ font-size:14px; }
+
+/* Hint Section */
+.hint-section{ margin-bottom:12px; }
+.hint-toggle{ background:rgba(255,215,0,.15); border:1px solid rgba(255,215,0,.35); color:#ffd700; padding:8px 14px; border-radius:10px; cursor:pointer; font-size:13px; font-weight:600; transition:all .2s; }
+.hint-toggle:hover{ background:rgba(255,215,0,.25); }
+.hint-content{ margin-top:10px; padding:12px; background:rgba(255,215,0,.08); border-left:3px solid #ffd700; border-radius:8px; }
+
+/* Analytics Stats */
+.stats-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:12px; }
+.stat-card{ text-align:center; padding:16px; background:rgba(90,167,255,.08); border-radius:12px; border:1px solid rgba(90,167,255,.2); }
+.stat-number{ font-size:32px; font-weight:800; color:#5aa7ff; margin-bottom:4px; }
+.stat-label{ font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:.5px; }
+@media (max-width:760px){ .stats-grid{ grid-template-columns:1fr; } }
+
+/* Results/Scoreboard */
+.score-summary{ display:flex; gap:20px; align-items:center; margin-top:14px; }
+.total-score-card{ text-align:center; padding:24px 32px; background:linear-gradient(135deg,rgba(90,167,255,.15),rgba(74,222,128,.15)); border-radius:16px; border:2px solid rgba(90,167,255,.3); }
+.total-score-number{ font-size:64px; font-weight:900; background:linear-gradient(135deg,#5aa7ff,#4ade80); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; margin-bottom:4px; }
+.total-score-label{ font-size:14px; color:var(--muted); text-transform:uppercase; letter-spacing:1px; font-weight:600; }
+.stats-row{ display:flex; flex-direction:column; gap:12px; flex:1; }
+.stat-mini{ text-align:center; padding:14px; background:rgba(255,255,255,.04); border-radius:12px; border:1px solid rgba(255,255,255,.08); }
+.stat-mini-number{ font-size:28px; font-weight:800; color:#5aa7ff; }
+.stat-mini-label{ font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.5px; margin-top:2px; }
+@media (max-width:760px){ .score-summary{ flex-direction:column; } }

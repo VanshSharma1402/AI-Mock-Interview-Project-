@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Results - AI Mock Interview</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="loadResults()">
+  <div class="container">
+    <div class="nav">
+      <div class="brand">🎉 Interview Complete!</div>
+      <button class="btn secondary" onclick="window.location.href='dashboard.html'">Back to Dashboard</button>
+    </div>
+
+    <div class="card">
+      <h2>📊 Your Scoreboard</h2>
+      <div class="score-summary">
+        <div class="total-score-card">
+          <div class="total-score-number" id="totalScore">0</div>
+          <div class="total-score-label">Total Score</div>
+        </div>
+        <div class="stats-row">
+          <div class="stat-mini">
+            <div class="stat-mini-number" id="questionsCount">0</div>
+            <div class="stat-mini-label">Questions</div>
+          </div>
+          <div class="stat-mini">
+            <div class="stat-mini-number" id="avgScore">0</div>
+            <div class="stat-mini-label">Avg Score</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <h2>📝 Detailed Results</h2>
+      <div id="resultsBox" class="list"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
